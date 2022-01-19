@@ -1,4 +1,3 @@
-package Flik;
 
 import java.util.Objects;
 

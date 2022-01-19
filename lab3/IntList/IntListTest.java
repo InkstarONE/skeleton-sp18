@@ -1,4 +1,3 @@
-package IntList;
 
 import static org.junit.Assert.*;
 
