@@ -1,3 +1,5 @@
+package IntList;
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -70,4 +72,15 @@ public class IntListTest {
       * to add a main method. See ArithmeticTest.java for an
       * example. */
 
+    @Test(timeout = 1000)
+    public void testReverse() {
+        IntList A = IntList.of(1, 2, 3);
+//        IntList B = IntList.reverse(A);
+        IntList.reverseList(A);
+        System.out.println(A.toString());
+//        assertEquals(IntList.of(3, 2, 1), B);
+//        assertNotEquals(IntList.of(1, 2, 3), A);
+//        IntList C = IntList.reverse(null);
+//        assertEquals(null, C);
+    }
 }

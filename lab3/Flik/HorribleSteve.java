@@ -1,3 +1,5 @@
+package Flik;
+
 public class HorribleSteve {
     public static void main(String [] args) {
         int i = 0;
@@ -7,5 +9,6 @@ public class HorribleSteve {
             }
         }
         System.out.println("i is " + i);
+        System.out.println(Flik.isSameNumber(128, 128));
     }
 }

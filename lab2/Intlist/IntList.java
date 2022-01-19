@@ -1,4 +1,4 @@
-
+package Intlist;
 
 import java.util.Formatter;
 
@@ -7,7 +7,7 @@ import java.util.Formatter;
  * with a large number of additional methods.
  *
  * @author P. N. Hilfinger, with some modifications by Josh Hug and melaniecebula
- *         [Do not modify this file.]
+ * [Do not modify this file.]
  */
 public class IntList {
     /**
@@ -31,7 +31,7 @@ public class IntList {
      * A List with null rest, and first = 0.
      */
     public IntList() {
-    /* NOTE: public IntList () { }  would also work. */
+        /* NOTE: public IntList () { }  would also work. */
         this(0, null);
     }
 
@@ -84,11 +84,11 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        if(A == null){
+        if (A == null) {
             return B;
         }
         IntList ptr = A;
-        while (ptr.rest != null){
+        while (ptr.rest != null) {
             ptr = ptr.rest;
         }
 
@@ -102,45 +102,15 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-//        if(A == null){
-//            return B;
-//        }
-//        if(A.rest == null){
-//            return new IntList(A.first, B);
-//        }
-//        return new IntList(A.first, catenate(A.rest, B));
-
-        IntList C=new IntList(A.first,null);
-        IntList q=C;
-        while(A.rest!=null){
-            A=A.rest;
-            C.rest=new IntList(A.first,null);
-            C= C.rest;
+        if(A == null){
+            return B;
         }
-        C.rest=new IntList(B.first,null);
-        C=C.rest;
-        while(B.rest!=null){
-            B=B.rest;
-            C.rest=new IntList(B.first,null);
-            C=C.rest;
+        if(A.rest == null){
+            return new IntList(A.first, B);
         }
-        return q;
+        return new IntList(A.first, catenate(A.rest, B));
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**
